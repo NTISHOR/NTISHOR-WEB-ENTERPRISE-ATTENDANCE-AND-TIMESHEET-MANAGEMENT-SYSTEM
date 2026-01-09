@@ -1,0 +1,15 @@
+h1 {
+    text-align-last: center;
+    color: rgb(255,0, 0);
+}
+
+h2 {
+    text-align-last: center;
+    color: rgb(0,0, 255);
+}
+
+footer {
+    background-color: rgb(0, 0, 255);
+    text-align-last: center;
+    color: rgb(255,0, 0);
+}
