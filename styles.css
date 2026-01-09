@@ -14,11 +14,34 @@ footer {
     color: rgb(255,0, 0);
 }
 
-#About {
+.About {
     text-align: center;
-    color: rgb(0, 0, 255);
+    color: rgb(0, 0, 200);
 }
 
-#A {
+#Service {
+    text-align: center;
+    color: rgb(0, 0, 200);
+}
+
+.Service {
+    text-align: center;
+    color: rgb(0, 0, 200);
+}
+
+.A {
     text-align: justify;
+    margin-left: 10px;
+   
+}
+
+.B {
+    text-align: center;
+    color: rgb(0, 0, 200);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
