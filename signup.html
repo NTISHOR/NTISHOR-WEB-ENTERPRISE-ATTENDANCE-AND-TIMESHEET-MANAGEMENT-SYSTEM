@@ -6,6 +6,7 @@
     <title>Create Account - NTISHOR WEB ENTERPRISE</title>
     <link rel="stylesheet" href="styles.css">
     
+
 </head>
 
 <body>
@@ -32,17 +33,18 @@
 
         <form action="signup.php" method="POST">
 
-            <label>Full Name</label>
-            <input type="text" name="fullname" required>
+           <label>Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
 
             <label>Email</label>
-            <input type="email" name="email" required>
+            <input type="email" id="email" name="email" required>
 
             <label>Password</label>
-            <input type="password" name="password" required>
+            <input type="password" id="password" name="password" required>
 
             <label>Confirm Password</label>
-            <input type="password" name="confirm_password" required>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
 
             <button type="submit">Sign Up</button>
 
@@ -50,12 +52,14 @@
                 Already have an account?
                 <a href="login.html">Login here</a>
             </p>
+            
+            <p id="error" style="color:red;"></p>
+
 
         </form>
     </div>
-
-</body>
-    <footer>
+    
+<footer>
     <p id='contact'>Contact Us:<br>
     Phone Number: 07064820492, 09043271699<br>
     Whatsapp: 07064820492<br>
@@ -64,4 +68,7 @@
     <p>99C Old Odukpani Road, Ikot Ansa, Calabar.</p>
 
 </footer>
+    <script src="signup.js"></script>
+</body>
+    
 </html>
