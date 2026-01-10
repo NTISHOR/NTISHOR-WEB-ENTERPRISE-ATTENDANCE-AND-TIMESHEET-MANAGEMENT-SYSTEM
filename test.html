@@ -6,126 +6,17 @@
     <title>NTISHOR WEB ENTERPRISE ATTENDANCE AND TIMESHEET MANAGEMENT SYSTEM</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    /* Reset some default margins/padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    line-height: 1.5;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;              /* allows wrapping on small screens */
-    padding: 2% 5%;
-    background-color: rgb(245, 245, 245);
-}
-
-/* Logo + Company Name */
-#logo {
-    display: flex;
-    align-items: center;
-    gap: 1%;
-}
-
-/* Circular Logo */
-#logo img {
-    width: 12%;            /* scales with screen */
-    max-width: 100px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Company Name */
-#logo h1 {
-    font-size: 2vw;       /* scales with viewport width */
-    min-font-size: 16px;  /* optional for very small screens */
-}
-
-/* Navbar */
-#navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap;       /* wrap nav links if screen too small */
-}
-
-/* Nav Links */
-#navbar ul li a {
-    text-decoration: none;
-    color: rgb(51, 51, 51);
-    font-weight: bold;
-    padding: 0.5% 1%;
-    font-size: 1rem;
-}
-
-/* Login / Sign Up Buttons */
-#navbar ul li a.login-btn {
-    background-color: rgb(0, 123, 255);
-    color: white;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background-color: rgb(0, 0, 255);
-    color: white;
-    text-align: center;
-    padding: 2% 5%;
-    font-size: 100%;
-}
-
-/* Main content spacing */
-main {
-    padding: 2% 5%;
-    text-align: center;
-}
-
-/* --- Media Queries for Mobile Screens --- */
-@media screen and (max-width: 768px) {
-    #logo h1 {
-        font-size: 4vw; /* larger relative to smaller screen */
-    }
-
-    #navbar ul {
-        flex-direction: column;  /* nav links stacked vertically */
-        align-items: center;
-        gap: 1%;
-    }
-
-    #navbar ul li a {
-        padding: 5px 10px;
-    }
-
-    #logo img {
-        width: 20%;
-        max-width: 80px;
+  @media screen and (max-width: 768px) {
+    footer {
+        font-size: 90%;   /* slightly smaller text on tablets */
+        padding: 3% 5%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    #logo h1 {
-        font-size: 5vw;
-    }
-
-    #navbar ul li a {
-        font-size: 0.9rem;
-        padding: 5px 8px;
-    }
-
-    #logo img {
-        width: 25%;
-        max-width: 60px;
+    footer {
+        font-size: 80%;   /* even smaller text on mobile */
+        padding: 4% 5%;
     }
 }
 
