@@ -5,21 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Ntishor Web Enterprise</title>
+     <link rel="stylesheet" href="styles.css">
+    <style>
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo image circular */
+#logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;          /* Makes it circular */
+    object-fit: cover;
+}
+
+#logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: rgb(51, 51, 51);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.navbar ul li a.login-btn {
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+    </style>
 </head>
 
 <body>
+   <header>
+    <!-- Logo + Company Name -->
+    <div id="logo">
+        <img src="IMAGES/LOGO3.png" alt="Company Logo">
+        <h1>NTISHOR WEB ENTERPRISE</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html#About">Home</a></li>
+            <li><a href="index2.html#About">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+            <li><a href="#" class="login-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+    
     <h1>NTISHOR WEB ENTERPRISE</h1>
     <h2>Staff Attendance and Timesheet Management System</h2>
 
     <nav class="navbar">
-        <ul class="nav-links">
-            <a href="index.html#About">Home</a>
-            <a href="index2.html#About">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <a href="#" class="login-btn">Login</a>
-            <a href="#" class="login-btn">Sign Up</a>
-        </ul>
+        
     </nav>
 
     <h3 id="About">About Ntishor Web Enterprise</h3>
