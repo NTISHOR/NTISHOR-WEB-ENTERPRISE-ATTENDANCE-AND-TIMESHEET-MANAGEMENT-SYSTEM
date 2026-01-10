@@ -9,11 +9,11 @@ h2 {
 }
 
 footer {
-    background-color: rgb(0, 0, 255);  /* blue background */
-    text-align: center;                 /* center the text */
-    color: rgb(255, 255, 255);          /* white text for readability */
-    font-size: 100%;                     /* relative to body font size */
-    padding: 20px;                       /* spacing inside the footer */
+    background-color: rgb(0, 0, 255);
+    text-align: center;
+    color: rgb(255,0, 0);
+    font-size: 100%;
+    background: 50
 }
 
 .About {
