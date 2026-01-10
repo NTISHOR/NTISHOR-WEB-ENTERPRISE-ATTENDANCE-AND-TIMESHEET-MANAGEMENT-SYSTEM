@@ -161,3 +161,32 @@ footer {
         padding: 5px 8px;
     }
 }
+
+.login-container {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+}

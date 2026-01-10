@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Ntishor Web Enterprise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 320px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+
+    <form action="login.php" method="POST">
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+        <a class="forgot" href="forgot-password.html">Forgot Password?</a>
+        <p>Don't have an account yet? <a href="signup.html">Create an account</a></p>
+    </form>
+</div>
+
+</body>
+</html>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTISHOR WEB ENTERPRISE ATTENDANCE AND TIMESHEET MANAGEMENT SYSTEM</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>Create Account - NTISHOR WEB ENTERPRISE</title>
+    <link rel="stylesheet" href="styles.css">
     
 </head>
+
 <body>
-    <header>
+<header>
     <nav id=logo>
         <img src="IMAGES/LOGO1.png" alt="Company Logo" width="150" class=company>
    
@@ -25,13 +26,38 @@
     </ul>
         </nav>
     </header>
-        
-<h2>Staff Attendance and Timesheet Managment System</h2>
+    <div class="signup-container">
+
+        <h2>Create Account</h2>
+
+        <form action="signup.php" method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="fullname" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+
+            <button type="submit">Sign Up</button>
+
+            <p>
+                Already have an account?
+                <a href="test.html">Login here</a>
+            </p>
+
+        </form>
+
+    </div>
 
 </body>
-    
-<footer>
-    <p id="contact">Contact Us:<br>  
+    <footer>
+    <p id='contact'>Contact Us:<br>
     Phone Number: 07064820492, 09043271699<br>
     Whatsapp: 07064820492<br>
         GitHub: NTISHOR</p>
