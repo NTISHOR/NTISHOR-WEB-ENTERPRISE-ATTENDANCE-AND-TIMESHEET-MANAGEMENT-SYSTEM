@@ -39,9 +39,13 @@ h2 {
 
 .A {
     text-align: justify;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
+.C {
+    text-align: justify;
+    margin-left: 30px;
+}
 header {
     display: flex; 
     justify-content: space-between;
