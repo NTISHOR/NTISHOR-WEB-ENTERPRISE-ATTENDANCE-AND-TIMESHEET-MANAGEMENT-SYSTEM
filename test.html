@@ -3,55 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTISHOR WEB ENTERPRISE ATTENDANCE AND TIMESHEET MANAGEMENT SYSTEM</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Ntishor Web Enterprise</title>
-     <link rel="stylesheet" href="styles.css">
     <style>
-
+    /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: flex;                    /* Logo + nav in one row */
+    justify-content: space-between;   /* Logo left, nav right */
     align-items: center;
-    padding: 10px 20px;
+    padding: 1% 5%;
     background-color: rgb(245, 245, 245);
 }
 
+/* Logo + company name */
 #logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1%;
 }
 
-/* Logo image circular */
+/* Circular logo */
 #logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;          /* Makes it circular */
+    width: 10%;                  /* scales with header */
+    max-width: 100px;            /* prevents too big */
+    height: auto;
+    border-radius: 50%;
     object-fit: cover;
 }
 
+/* Company name */
 #logo h1 {
-    font-size: 24px;
+    font-size: 2vw;              /* scales with screen width */
     margin: 0;
-    color: rgb(51, 51, 51);
 }
 
-.navbar ul {
+/* Navbar menu */
+#navbar ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 2%;
     margin: 0;
     padding: 0;
 }
 
-.navbar ul li a {
+/* Navbar links */
+#navbar ul li a {
     text-decoration: none;
     color: rgb(51, 51, 51);
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 0.5% 1%;
 }
 
-.navbar ul li a.login-btn {
+/* Login/Sign Up buttons */
+#navbar ul li a.login-btn {
     background-color: rgb(0, 123, 255);
     color: white;
     border-radius: 5px;
@@ -59,128 +63,40 @@ header {
 
     </style>
 </head>
-
 <body>
-   <header>
-    <!-- Logo + Company Name -->
-    <div id="logo">
-        <img src="IMAGES/LOGO3.png" alt="Company Logo">
-        <h1>NTISHOR WEB ENTERPRISE</h1>
-    </div>
 
-    <!-- Navigation Menu -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html#About">Home</a></li>
-            <li><a href="index2.html#About">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#" class="login-btn">Login</a></li>
-            <li><a href="#" class="login-btn">Sign Up</a></li>
-        </ul>
-    </nav>
-</header>
-    
-    <h1>NTISHOR WEB ENTERPRISE</h1>
-    <h2>Staff Attendance and Timesheet Management System</h2>
+    <header>
+        <!-- Logo + Company Name -->
+        <div id="logo">
+            <img src="IMAGES/LOGO3.png" alt="Company Logo">
+            <h1>NTISHOR WEB ENTERPRISE</h1>
+        </div>
 
-    <nav class="navbar">
-        
-    </nav>
+        <!-- Navigation Menu -->
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html#About">Home</a></li>
+                <li><a href="index2.html#About">About Us</a></li>
+                <li><a href="index2.html#Service">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+                <li><a href="#" class="login-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h3 id="About">About Ntishor Web Enterprise</h3>
-    <p id="A">
-        Ntishor Web Enterprise is a dynamic web solutions provider dedicated to crafting stunning websites,
-        developing robust web applications, and delivering impactful digital experiences. We blend creativity 
-        with cutting-edge technology to help businesses thrive online.
-    </p>
+    <main>
+        <h2>Staff Attendance and Timesheet Management System</h2>
+    </main>
 
-    <!-- INSERTED FULL OVERVIEW STARTS HERE -->
-
-    <section class="overview">
-
-        <h2>Core Services</h2>
-
-        <h3>1. Web Development</h3>
-        <p>
-            Ntishor Web Enterprise builds responsive, fast, and well-structured websites using modern 
-            technologies like HTML, CSS, JavaScript, PHP, and frameworks.
+    <footer>
+        <p id="contact">Contact Us:<br>
+            Phone Number: 07064820492, 09043271699<br>
+            Whatsapp: 07064820492<br>
+            GitHub: NTISHOR
         </p>
-
-        <h3>2. Backend Systems & Database Solutions</h3>
-        <p>
-            The enterprise designs secure backend systems for authentication, data management, and 
-            automated operations—e.g., login systems, attendance systems, and record-keeping applications.
-        </p>
-
-        <h3>3. UI/UX Design</h3>
-        <p>
-            Thoughtful interface and experience design to make applications visually appealing, intuitive, 
-            and easy to use.
-        </p>
-
-        <h3>4. IT Consultancy</h3>
-        <p>
-            Guiding individuals, startups, and small organizations on the best technologies and digital strategies to adopt.
-        </p>
-
-        <h3>5. Software Maintenance</h3>
-        <p>
-            Ongoing support and updates for existing digital systems to ensure continuous performance.
-        </p>
-
-        <h2>Projects & Innovations</h2>
-
-        <h3>Attendance Timesheet Management System</h3>
-        <p>
-            A secure, web-based system for tracking lecturer or staff attendance. Features include login 
-            authentication, supervisor management, data recording, and database storage.
-        </p>
-
-        <h3>Modern Website Templates</h3>
-        <p>
-            Custom-built designs tailored for businesses and personal brands.
-        </p>
-
-        <h3>Backend Authentication Modules</h3>
-        <p>
-            PHP-based login and registration modules for use in different web apps.
-        </p>
-
-        <h2>Core Values</h2>
-        <ul>
-            <li><strong>Innovation</strong> – Exploring modern tools and fresh ideas.</li>
-            <li><strong>Integrity</strong> – Delivering digital solutions with honesty and reliability.</li>
-            <li><strong>Excellence</strong> – Providing high-quality products and support.</li>
-            <li><strong>Customer-Centricity</strong> – Understanding and meeting user needs.</li>
-            <li><strong>Growth Mindset</strong> – Continuously improving and learning.</li>
-        </ul>
-
-        <h2>Why Ntishor Web Enterprise Stands Out</h2>
-        <ul>
-            <li>Strong commitment to clean, maintainable coding practices.</li>
-            <li>Focus on real-world problems and practical solutions.</li>
-            <li>User-friendly and visually appealing designs.</li>
-            <li>Affordable and adaptable services for different clients.</li>
-            <li>Passion for learning and emerging technologies.</li>
-        </ul>
-    </section>
-
-    <!-- INSERTED FULL OVERVIEW ENDS HERE -->
+        <p>99C Old Odukpani Road, Ikot Ansa, Calabar.</p>
+    </footer>
 
 </body>
-
-<footer>
-    Contact Us:<br>
-    Phone Number: 07064820492, 09043271699<br>
-    Whatsapp: 07064820492<br>
-    GitHub: NTISHOR<br><br>
-
-    <address>
-        99C Old Odukpani Road,<br>
-        Ikot Ansa,<br>
-        Calabar.
-    </address>
-</footer>
-
 </html>
