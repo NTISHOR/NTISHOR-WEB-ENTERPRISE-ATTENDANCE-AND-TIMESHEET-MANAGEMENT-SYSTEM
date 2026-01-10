@@ -1,37 +1,38 @@
+html {
+    font-family: 'Times New Roman', Arial;
+}
+
+#company {
+    font-family: Algerian;
+    color: Blue;
+    font-size: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
 h1 {
     text-align: center;
-    color: rgb(0,0, 2525);
+    color: rgb(0, 0, 255);
+    font-size: clamp(20px, 3vw, 32px);
 }
 
 h2 {
     text-align: center;
     color: rgb(0, 0, 255);
+    font-size: clamp(18px, 2.5vw, 28px);
 }
 
-footer {
-    background-color: rgb(0, 0, 255);
-    text-align: center;
-    color: rgb(255,0, 0);
-    font-size: 100%;
-    background: 50
-}
-
-.About {
-    text-align: center;
-    color: rgb(0, 0, 200);
-}
-
-#About {
-    text-align: center;
-    color: rgb(0, 0, 200);
-}
-
-#Service {
-    text-align: center;
-    color: rgb(0, 0, 200);
-}
-
-.Service {
+.About, #About, .Service, #Service, .B {
     text-align: center;
     color: rgb(0, 0, 200);
 }
@@ -39,43 +40,17 @@ footer {
 .A {
     text-align: justify;
     margin-left: 10px;
-   
-}
-
-.B {
-    text-align: center;
-    color: rgb(0, 0, 200);
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-#logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 20px;
-    background-color: rgb(255, 2, 2);
-}
-
-#logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 200%;
-    object-fit: cover;
 }
 
 header {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    font-size: 50%;
-    padding: 10px 20px;
+    flex-wrap: wrap;
+    padding: 2% 5%;
     background-color: rgb(245, 245, 245);
 }
+
 
 #logo {
     display: flex;  
@@ -84,31 +59,34 @@ header {
 }
 
 #logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 100px;
+    max-width: 100px;
+    height: auto;
+    border-radius: 100px;
     object-fit: cover;
 }
 
 #logo h1 {
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 28px);
     margin: 0;
     color: rgb(51, 51, 51);
 }
 
+
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: rgb(51, 51, 51);
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 0.5% 1%;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
 }
 
 .navbar ul li a.login-btn {
@@ -117,8 +95,59 @@ header {
     border-radius: 5px;
 }
 
-body {
-    font-size: 150%;
-    margin: 0;
-    padding: 0;
+main {
+    padding: 2% 5%;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);  /* white text */
+    text-align: center;
+    padding: clamp(10px, 2%, 20px) clamp(20px, 5%, 40px);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    #logo img {
+        width: 20%;
+        max-width: 80px;
+    }
+
+    #logo h1 {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #logo img {
+        width: 25%;
+        max-width: 60px;
+    }
+
+    #logo h1 {
+        font-size: 5vw;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
 }
