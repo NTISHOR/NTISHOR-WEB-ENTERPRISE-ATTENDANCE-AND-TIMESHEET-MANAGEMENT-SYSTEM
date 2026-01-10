@@ -106,7 +106,6 @@ main {
 }
 
 footer {
-    color: red;
     text-align: center;
     padding: clamp(10px, 2%, 20px) clamp(20px, 5%, 40px);
     font-size: clamp(0.8rem, 2vw, 1rem);
