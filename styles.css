@@ -4,8 +4,9 @@ html {
 
 #company {
     font-family: Algerian;
-    color: Blue;
+    color: rgb(0, 0, 255);
     font-size: 100px;
+    background-color: rgb(245, 245, 245);
 }
 
 * {
@@ -105,11 +106,17 @@ main {
 }
 
 footer {
-    background-color: rgb(0, 0, 255);
-    color: rgb(255, 255, 255);  /* white text */
+    color: red;
     text-align: center;
     padding: clamp(10px, 2%, 20px) clamp(20px, 5%, 40px);
     font-size: clamp(0.8rem, 2vw, 1rem);
+    background-image: url('IMAGES/LOGO.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 20px;
+
 }
 
 .nav-links {
