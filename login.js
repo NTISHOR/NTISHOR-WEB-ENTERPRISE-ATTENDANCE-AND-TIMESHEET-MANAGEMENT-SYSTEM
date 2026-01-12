@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         return;
     }
 
-    if (pass === "") {
+    if (pass === "") {i
         error.innerHTML = "Password is required.";
         return;
     }

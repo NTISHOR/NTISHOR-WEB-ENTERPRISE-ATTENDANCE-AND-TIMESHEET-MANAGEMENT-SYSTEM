@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - Ntishor Web Enterprise</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal - Ntishor Web Enterprise</title>
     <style>
-    body {
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.login-container {
-    width: 320px;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    margin-top: 10px;
-}
-
-a {
-    display: block;
-    margin-top: 10px;
-}
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px;
+            background: #0047ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>Ntishor Web Enterprise</h1>
+        <h3>Employee Attendance & Management System</h3>
+    </header>
 
-<div class="login-container">
-    <h2>Login</h2>
+    <div class="container">
 
-    <form action="login.php" method="POST">
-        <label>Email</label>
-        <input type="email" name="email" required>
+        <p>Welcome to the staff portal. Select your login role below:</p>
 
-        <label>Password</label>
-        <input type="password" name="password" required>
+        <a href="supervisor/login.php" class="btn">Supervisor Login</a>
+        <a href="lecturer/login.php" class="btn">Lecturer Login</a>
+        <a href="admin/login.php" class="btn">Admin Login</a>
 
-        <button type="submit">Login</button>
+    </div>
 
-        <a class="forgot" href="forgot-password.html">Forgot Password?</a>
-        <p>Don't have an account yet? <a href="signup.html">Create an account</a></p>
-    </form>
-</div>
+    <footer>
+        <p>© 2026 Ntishor Web Enterprise — Internal Use Only</p>
+    </footer>
 
 </body>
 </html>
