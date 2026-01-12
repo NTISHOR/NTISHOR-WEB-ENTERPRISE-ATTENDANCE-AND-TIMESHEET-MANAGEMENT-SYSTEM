@@ -100,18 +100,13 @@ header {
 }
 
 footer {
-    color: black;
-    text-align: center;
-    padding: 20px;
-    background-image: url('IMAGES/LOGO.png');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
 .nav-links {
     display: flex;
