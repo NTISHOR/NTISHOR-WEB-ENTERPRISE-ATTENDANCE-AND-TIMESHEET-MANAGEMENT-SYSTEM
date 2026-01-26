@@ -19,6 +19,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     font-size: clamp(14px, 1.5vw, 18px);
+    
 }
 
 h1 {
@@ -107,6 +108,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 30px;
+    margin-top: auto;
     }
 
 .nav-links {
