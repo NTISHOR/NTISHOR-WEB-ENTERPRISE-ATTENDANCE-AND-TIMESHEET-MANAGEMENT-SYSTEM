@@ -155,6 +155,23 @@ footer {
     }
 }
 
+.signup-container, 
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.signup-container h2,
+.login-container h2 {
+    text-align: center;
+    color: rgb(0,0,200);
+}
+
 form label {
     font-weight: bold;
     display: block;
