@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Login - NTISHOR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <nav id="logo">
+        <img src="IMAGES/LOGO1.png" alt="Company Logo" class="company">
+        <h1 id="company">NTISHOR WEB ENTERPRISE</h1>
+    </nav>
+</header>
+
+<div class="login-container">
+
+    <h2>Lecturer Portal Login</h2>
+
+    <form action="lecturer_login.php" method="POST">
+
+        <label>Lecturer ID</label>
+        <input type="text" name="lecturer_id" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+        <p class="note">
+            Access restricted to lecturers only.
+        </p>
+
+    </form>
+
+</div>
+
+<footer>
+    <p id='contact'>
+        © 2026 Ntishor Web Enterprise — Internal Use Only
+    </p>
+</footer>
+
+</body>
+</html>

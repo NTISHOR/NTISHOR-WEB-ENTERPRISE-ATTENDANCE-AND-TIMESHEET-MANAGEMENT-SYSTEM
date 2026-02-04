@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Login - NTISHOR WEB ENTERPRISE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <nav id="logo">
+        <img src="IMAGES/LOGO1.png" alt="Company Logo" class="company">
+        <h1 id="company">NTISHOR WEB ENTERPRISE</h1>
+    </nav>
+</header>
+
+<div class="login-container">
+    <h2>Supervisor Login</h2>
+
+    <form action="supervisor_login.php" method="POST">
+
+        <label for="sup_id">Supervisor ID</label>
+        <input type="text" id="sup_id" name="sup_id" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+        <p>Supervisors only.</p>
+    </form>
+</div>
+
+<footer>
+        <p id='copyright' >© 2026 Ntishor Web Enterprise — Internal Use Only</p>
+</footer>
+
+</body>
+</html>
