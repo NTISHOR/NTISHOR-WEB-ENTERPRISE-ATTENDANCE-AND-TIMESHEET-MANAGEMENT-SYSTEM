@@ -1,0 +1,81 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['lecturer_id'])) {
+    header("Location: lecturerlogin.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecturer Dashboard - NTISHOR</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <img src="IMAGES/LOGO1.png" alt="Logo">
+        <h1>NTISHOR WEB ENTERPRISE</h1>
+    </div>
+
+    <div>
+        Welcome, <strong>Dr. Akpotu Augustine Ntishor</strong> |
+        <a href="logout.php">Logout</a>
+    </div>
+</header>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Today’s Classes</a>
+        <a href="#">Record Attendance</a>
+        <a href="#">My Timetable</a>
+        <a href="#">Timesheet</a>
+        <a href="#">Notifications</a>
+        <a href="#">Profile</a>
+    </div>
+
+    <div class="main-content">
+
+        <h2>Today’s Summary</h2>
+
+        <div class="cards">
+            <div class="card">Classes Today: 2</div>
+            <div class="card">Pending Approval: 1</div>
+            <div class="card">Approved This Week: 5</div>
+            <div class="card">Missed Classes: 0</div>
+        </div>
+
+        <h2>Today’s Classes</h2>
+
+        <table border="1" width="100%" cellpadding="10">
+            <tr>
+                <th>Course</th>
+                <th>Time</th>
+                <th>Venue</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>CSC301</td>
+                <td>9:00AM - 11:00AM</td>
+                <td>LT1</td>
+                <td>Not Recorded</td>
+                <td><button>Record</button></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Ntishor Web Enterprise — Internal Use Only</p>
+</footer>
+
+</body>
+</html>

@@ -1,30 +1,25 @@
 <?php
 session_start();
-include 'config.php'; // database connection
+include "config.php";
 
 $error = "";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lecturer_id = mysqli_real_escape_string($conn, $_POST['lecturer_id']);
     $password = $_POST['password'];
 
-    // Check if lecturer exists
-    $sql = "SELECT * FROM lecturers WHERE lecturer_id='$lecturer_id'";
+    $sql = "SELECT * FROM lecturers WHERE lecturer_id = '$lecturer_id'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
 
-        // Verify password (password must be hashed in DB)
         if (password_verify($password, $row['password'])) {
-            // Login successful
             $_SESSION['lecturer_id'] = $row['lecturer_id'];
             $_SESSION['fullname'] = $row['fullname'];
 
-            // Redirect to lecturer dashboard
             header("Location: lecturerdashboard.php");
-exit();
-
+            exit();
         } else {
             $error = "Incorrect Password!";
         }
@@ -33,23 +28,15 @@ exit();
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lecturer Login - NTISHOR</title>
+<title>Lecturer Login</title>
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-
-<header>
-    <nav id="logo">
-        <img src="IMAGES/LOGO1.png" alt="Company Logo" class="company">
-        <h1 id="company">NTISHOR WEB ENTERPRISE</h1>
-    </nav>
-</header>
 
 <div class="login-container">
     <h2>Lecturer Login</h2>
@@ -64,14 +51,10 @@ exit();
         <button type="submit">Login</button>
     </form>
 
-    <?php if ($error != ""): ?>
+    <?php if ($error != "") { ?>
         <p style="color:red; text-align:center;"><?php echo $error; ?></p>
-    <?php endif; ?>
+    <?php } ?>
 </div>
-    
-<footer>
-    <p id='contact'>© 2026 Ntishor Web Enterprise — Internal Use Only</p>
-</footer>
 
 </body>
 </html>

@@ -1,12 +1,12 @@
 <?php
 session_start();
-include 'config.php'; // database connection
+include 'config.php'; // MySQL connection ($conn)
 
-$error = "";
-
+// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     $lecturer_id = mysqli_real_escape_string($conn, $_POST['lecturer_id']);
-    $password = $_POST['password'];
+    $password    = $_POST['password'];
 
     // Check if lecturer exists
     $sql = "SELECT * FROM lecturers WHERE lecturer_id='$lecturer_id'";
@@ -15,19 +15,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
 
-        // Verify password (password must be hashed in DB)
+        // Verify password
         if (password_verify($password, $row['password'])) {
-            // Login successful
+            // Successful login
             $_SESSION['lecturer_id'] = $row['lecturer_id'];
             $_SESSION['fullname'] = $row['fullname'];
 
             // Redirect to lecturer dashboard
-            header("Location: lecturerdashboard.php");
-exit();
-
+            header("Location: lecturer_dashboard.php");
+            exit();
         } else {
             $error = "Incorrect Password!";
         }
+
     } else {
         $error = "Invalid Lecturer ID!";
     }
@@ -44,19 +44,12 @@ exit();
 </head>
 <body>
 
-<header>
-    <nav id="logo">
-        <img src="IMAGES/LOGO1.png" alt="Company Logo" class="company">
-        <h1 id="company">NTISHOR WEB ENTERPRISE</h1>
-    </nav>
-</header>
-
 <div class="login-container">
-    <h2>Lecturer Login</h2>
+    <h2>Supervisor Login</h2>
 
-    <form method="POST">
+    <form action="supervisorloginlogin.php" method="POST">
         <label>Lecturer ID</label>
-        <input type="text" name="lecturer_id" required>
+        <input type="text" name="supervisor_id" required>
 
         <label>Password</label>
         <input type="password" name="password" required>
@@ -64,14 +57,13 @@ exit();
         <button type="submit">Login</button>
     </form>
 
-    <?php if ($error != ""): ?>
-        <p style="color:red; text-align:center;"><?php echo $error; ?></p>
-    <?php endif; ?>
+    <?php
+    // Show error if login failed
+    if (isset($error)) {
+        echo "<p style='color:red; text-align:center;'>$error</p>";
+    }
+    ?>
 </div>
-    
-<footer>
-    <p id='contact'>© 2026 Ntishor Web Enterprise — Internal Use Only</p>
-</footer>
 
 </body>
 </html>
